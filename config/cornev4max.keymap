@@ -1,0 +1,27 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+  keymap {
+    compatible = "zmk,keymap";
+
+    base_layer {
+      label = "BASE";
+      bindings = <
+        &kp 1  &kp 2  &kp 3  &kp 4  &kp 5  &kp 6       &kp 7  &kp 8  &kp 9  &kp 0  &kp a  &kp b
+        &kp c  &kp d  &kp e  &kp f  &kp g  &kp h       &kp i  &kp j  &kp k  &kp l  &kp m  &kp n
+        &kp o  &kp p  &kp q  &kp r  &kp s  &kp t       &kp u  &kp v  &kp w  &kp x  &kp y  &kp z
+        &kp 1  &kp 2  &kp 3  &kp 4  &kp 5  &kp 6       &kp 7  &kp 8  &kp 9  &kp 0  &kp a  &kp b
+      >;
+    };
+  };
+
+  conditional_layers {
+    compatible = "zmk,conditional-layers";
+
+    Activate_EXT {
+      if-layers = <1 2>;
+      then-layer = <3>;
+    };
+  };
+};
