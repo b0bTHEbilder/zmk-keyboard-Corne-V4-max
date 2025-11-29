@@ -1,0 +1,17 @@
+if SHIELD_CORNEV4MAX
+
+# Name must be less than 16 characters long!
+config ZMK_KEYBOARD_NAME
+    default "Corne V4 Max"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_CORNEV4MAX_LEFT || SHIELD_CORNEV4MAX_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif
